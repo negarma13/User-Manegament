@@ -1,0 +1,22 @@
+class Student:
+    def __init__(self, firstname, lastname, gpa):
+        self.first_name = firstname
+        self.last_name = lastname
+        self.gpa = gpa
+
+
+student_list = [
+    Student("Forouzan", "Naghdi", 20),
+    Student("Samaneh", "Shahmohammadi:", 16),
+    Student("Shahin", "Nasiri:", 17),
+    Student("Farbod", "Farzin Far", 18),
+]
+
+# def sort_key(student):
+#     return student.gpa
+
+# student_sorted = sorted(student_list, key=sort_key, reverse=True)
+student_sorted = sorted(student_list, key=lambda s: s.gpa, reverse=False)
+
+for student in student_sorted:
+    print(f"{student.first_name} {student.last_name} ({student.gpa})")
